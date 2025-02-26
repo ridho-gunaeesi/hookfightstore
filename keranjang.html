@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Keranjang Belanja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+    <div class="container border mt-4 p-4 rounded-3 shadow bg-white">
+        <h3>Keranjang Belanja</h3>
+        <ul id="cart-list" class="list-group mt-3"></ul>
+        <div id="total-price" class="mt-3">
+            <strong>Total Harga: Rp. <span id="total-value">0</span></strong>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Formulir Pemesanan</h2>
+        
+        <div class="container">
+            <form id="order-form">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Nomor Telepon</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="address" class="form-label">Alamat Pengiriman</label>
+                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="paymentMethod" class="form-label">Metode Pembayaran</label>
+                    <select class="form-select" id="paymentMethod" required>
+                        <option value="" selected disabled>Pilih Metode Pembayaran</option>
+                        <option value="creditCard">Kartu Kredit</option>
+                        <option value="bankTransfer">Transfer Bank</option>
+                        <option value="cashOnDelivery">Bayar di Tempat</option>
+                    </select>
+                </div>
+        
+                <button type="submit" class="btn btn-primary" id="placeOrderBtn">Pesan Sekarang</button>
+            </form>
+        </div>
+        
+        
+        
+        <script>
+            // Fungsi untuk menampilkan total harga dan produk di keranjang
+            function displayCart() {
+                const cartList = document.getElementById("cart-list");
+                const totalValue = document.getElementById("total-value");
+        
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                // Cek apakah ada produk di keranjang
+                if (cartList) {
+                    cartList.innerHTML = ""; // Clear list sebelum menambahkan ulang produk
+                }
+        
+                let totalPrice = 0;
+        
+                // Loop untuk menambahkan setiap item dalam keranjang
+                cart.forEach(item => {
+                    const listItem = document.createElement("li");
+                    listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+        
+                    listItem.innerHTML = `
+                        <span>${item.nama}</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary change-quantity" data-id="${item.id}" data-action="decrease">-</button>
+                            <span class="mx-2">${item.quantity}</span>
+                            <button class="btn btn-sm btn-outline-secondary change-quantity" data-id="${item.id}" data-action="increase">+</button>
+                        </div>
+                        <span class="fw-bold">Rp. ${item.harga * item.quantity}</span>
+                    `;
+        
+                    cartList.appendChild(listItem);
+        
+                    totalPrice += item.harga * item.quantity;
+                });
+        
+                if (totalValue) {
+                    totalValue.textContent = `Rp. ${totalPrice}`;
+                }
+        
+                const changeButtons = document.querySelectorAll('.change-quantity');
+                changeButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = parseInt(button.getAttribute("data-id"));
+                        const action = button.getAttribute("data-action");
+        
+                        changeQuantity(id, action);
+                    });
+                });
+            }
+        
+            // Fungsi untuk mengubah kuantitas
+            function changeQuantity(id, action) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                const productIndex = cart.findIndex(item => item.id === id);
+        
+                if (productIndex !== -1) {
+                    if (action === "increase") {
+                        cart[productIndex].quantity += 1;
+                    } else if (action === "decrease" && cart[productIndex].quantity > 1) {
+                        cart[productIndex].quantity -= 1;
+                    }
+        
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    displayCart();  // Update keranjang setelah kuantitas berubah
+                }
+            }
+        
+            // Event listener untuk tombol pemesanan
+            document.getElementById('order-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                // Ambil data dari formulir
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const address = document.getElementById('address').value;
+                const paymentMethod = document.getElementById('paymentMethod').value;
+        
+                // Validasi data
+                if (!fullName || !email || !phone || !address || !paymentMethod) {
+                    alert("Semua kolom harus diisi!");
+                    return;
+                }
+        
+                // Simpan data pemesanan
+                const orderData = {
+                    fullName,
+                    email,
+                    phone,
+                    address,
+                    paymentMethod,
+                    cart: JSON.parse(localStorage.getItem("cart")),
+                    totalAmount: document.getElementById("total-value").textContent
+                };
+        
+                // Kirim data pemesanan ke server atau simpan di localStorage (untuk demo)
+                console.log("Data Pemesanan:", orderData);
+        
+                // Tampilkan notifikasi sukses
+                Swal.fire({
+                    title: 'Pesanan Berhasil!',
+                    text: 'Terimakasih telah melakukan pemesanan. Kami akan segera memprosesnya.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    // Kosongkan keranjang setelah pemesanan
+                    localStorage.removeItem("cart");
+        
+                    // Mengalihkan ke halaman utama setelah pengguna menekan tombol OK
+                    window.location.href = 'index.html'; // Halaman utama setelah pemesanan
+                });
+            });
+        </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      </head>      
+    <script src="javascript/checkout.js"></script>
+</body>
+</html>

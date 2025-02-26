@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOOK Fight Gear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body class="bg-secondary">
+    <div class="container border nb-4 mt-4 rounded-3 shadow bg-white">
+        <!--menu-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-md-flex p-5">
+            <div><h2>HOOK Fight Store</h2></div>
+            <div class="ms-auto my-auto">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active mx-md-3" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-md-3" href="all_product.html">Semua Produk</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-md-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Kategori
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="kategori_gloves.html">Glove</a></li>
+                      <li><a class="dropdown-item" href="kategori_handwrap.html">Handwrap</a></li>
+                      <li><a class="dropdown-item" href="kategori_headguard.html">Headguard</a></li>
+                      <li><a class="dropdown-item" href="kategori_focuspad.html">Focus Pad</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" id="search-input" placeholder="Cari Produk..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Cari</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!--katalog-->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5" id="product-list">
+            <div class="col mb-4 product" data-nama="Knight Boxing Glove" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/boxing gloves.jpg" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Knight' Boxing glove salah satu sarung tinju yang cocok digunakan untuk latihan/padding.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="1" data-nama="Knight Boxing Glove" data-harga="455000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.455.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 product" data-nama="Deep Boxing Glove" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/boxing gloves2.jpg" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Deep' Boxing glove merupakan sarung tinju yang dirancang untuk memukul samsak.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="2" data-nama="Deep Boxing Glove" data-harga="465000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.465.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 product" data-nama="Radar Boxing Glove" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/boxing gloves3.jpg" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Radar' Boxing glove salah satu sarung tinju yang cocok digunakan untuk latihan/padding.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="3" data-nama="Radar Boxing Glove" data-harga="455000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.455.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5">
+            <div class="col mb-4 product" data-nama="Uni Demon Boxing Glove" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/sp glove1.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Uni Demon' Boxing glove salah satu sarung tinju yang cocok digunakan untuk latihan/padding.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="4" data-nama="Uni Demon Boxing Glove" data-harga="465000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.465.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 product" data-nama="Boxing Sparring Gloves" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/sp glove2.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Boxing Sparring Gloves' Gloves yang dirancang khusus untuk latihan sparring Boxing.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="5" data-nama="Boxing Sparring Gloves" data-harga="655000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.655.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4 product" data-nama="Kickboxing Gloves" data-kategori="Gloves">
+                <div class="card shadow">
+                    <img src="image/sp glove3.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Kickboxing' Gloves yang dirancang khusus untuk latihan sparring Kickboxing.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="6" data-nama="Kickboxing Gloves" data-harga="785000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.785.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5" id="product-list">
+            <!-- Produk Handwrap 1 -->
+            <div class="col mb-4 product" data-nama="Urban Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/Handwrap1.png" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Urban' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="7" data-nama="Urban Handwrap" data-harga="84000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.84.000</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk Handwrap 2 -->
+            <div class="col mb-4 product" data-nama="Muerte Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/sp handwrap2.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Muerte' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="8" data-nama="Muerte Handwrap" data-harga="114000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.114.000</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk Handwrap 3 -->
+            <div class="col mb-4 product" data-nama="Box Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/Handwrap3.png" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Box' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="9" data-nama="Box Handwrap" data-harga="90000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.90.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5">
+            <!-- Produk Handwrap 4 -->
+            <div class="col mb-4 product" data-nama="Tiger Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/sp handwrap1.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Tiger' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="10" data-nama="Tiger Handwrap" data-harga="96000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.96.000</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk Handwrap 5 -->
+            <div class="col mb-4 product" data-nama="Force Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/Handwrap2.png" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Force' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="11" data-nama="Force Handwrap" data-harga="84000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.84.000</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Produk Handwrap 6 -->
+            <div class="col mb-4 product" data-nama="Force 2.0 Handwrap" data-kategori="Handwrap">
+                <div class="card shadow">
+                    <img src="image/sp handwrap3.webp" class="card-img-top"/>
+                    <div class="card-body">
+                        <p class="card-text">'Force 2.0' Handwrap by Hook merupakan item wajib yang harus dimiliki seorang fighter.</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="12" data-nama="Force 2.0 Handwrap" data-harga="94000">Tambah ke Keranjang</button>
+                        <span class="ms-auto text-danger fw-bold d-block text-center">Rp.94.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  <!--headguard-->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5" id="product-list">
+    <!-- Produk Headguard 1 -->
+    <div class="col mb-4 product" data-nama="Challenger 2.0 Headguard" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/headguard1.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Challenger 2.0' Headguard, alat yang dapat membantu menjaga keamanan fighter saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="13" data-nama="Challenger 2.0 Headguard" data-harga="355000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.355.000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produk Headguard 2 -->
+    <div class="col mb-4 product" data-nama="Full Face Headguard" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/headguard2.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Full face' Headguard, alat yang dapat membantu menjaga keamanan fighter saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="14" data-nama="Full Face Headguard" data-harga="685000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.685.000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produk Headguard 3 -->
+    <div class="col mb-4 product" data-nama="Fight Headguard" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/headguard3.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Fight' Headguard, alat yang dapat membantu menjaga keamanan fighter saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="15" data-nama="Fight Headguard" data-harga="455000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.455.000</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5">
+    <!-- Produk Headguard 4 -->
+    <div class="col mb-4 product" data-nama="Champion Headguard Anak" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/sp headguard1.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Champion' Headguard anak, alat yang dapat membantu menjaga keamanan anak saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="16" data-nama="Champion Headguard Anak" data-harga="355000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.355.000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produk Headguard 5 -->
+    <div class="col mb-4 product" data-nama="Paint Headguard Anak" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/sp headguard2.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Paint' Headguard anak, alat yang dapat membantu menjaga keamanan anak saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="17" data-nama="Paint Headguard Anak" data-harga="685000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.685.000</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produk Headguard 6 -->
+    <div class="col mb-4 product" data-nama="Challenger Headguard Anak" data-kategori="Headguard">
+        <div class="card shadow">
+            <img src="image/sp headguard3.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Challenger' Headguard anak, alat yang dapat membantu menjaga keamanan anak saat tanding maupun sparring.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="18" data-nama="Challenger Headguard Anak" data-harga="455000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.455.000</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--pad-->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5" id="product-list">
+    <!-- Produk Focus Pad 1 -->
+    <div class="col mb-4 product" data-nama="Coach Focus Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/pad1.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Coach' Focus Pad, alat latihan yang dapat melatih akurasi dan focus seorang fighter.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="19" data-nama="Coach Focus Pad" data-harga="435000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.435.000</span>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Produk Focus Pad 2 -->
+    <div class="col mb-4 product" data-nama="Coach 2.0 Focus Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/pad2.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Coach 2.0' Focus Pad, alat latihan yang dapat melatih akurasi dan focus seorang fighter.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="20" data-nama="Coach 2.0 Focus Pad" data-harga="420000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.420.000</span>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Produk Focus Pad 3 -->
+    <div class="col mb-4 product" data-nama="Vintage Focus Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/pad3.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Vintage' Focus Pad, alat latihan yang dapat melatih akurasi dan focus seorang fighter.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="21" data-nama="Vintage Focus Pad" data-harga="785000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.785.000</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-5">
+    <!-- Produk Focus Pad 4 -->
+    <div class="col mb-4 product" data-nama="Focus Power Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/sp pad1.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">Focus Power Pad, alat latihan yang dapat melatih akurasi dan Power seorang fighter dalam memukul.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="22" data-nama="Focus Power Pad" data-harga="785000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.785.000</span>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Produk Focus Pad 5 -->
+    <div class="col mb-4 product" data-nama="Stick Focus Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/sp pad2.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Stick' Focus Pad, alat latihan yang dapat melatih kecepatan dan kelincahan seorang fighter.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="23" data-nama="Stick Focus Pad" data-harga="390000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.390.000</span>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Produk Focus Pad 6 -->
+    <div class="col mb-4 product" data-nama="Face Focus Pad" data-kategori="Focus Pad">
+        <div class="card shadow">
+            <img src="image/sp pad3.webp" class="card-img-top"/>
+            <div class="card-body">
+                <p class="card-text">'Face' Focus Pad, alat latihan yang mensimulasikan pukulan pada area wajah manusia.</p>
+            </div>
+            <div class="card-footer d-flex">
+                <button class="btn btn-sm btn-primary d-block add-to-cart" data-id="24" data-nama="Face Focus Pad" data-harga="570000">Tambah ke Keranjang</button>
+                <span class="ms-auto text-danger fw-bold d-block text-center">Rp.570.000</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+      <!--Copyright-->
+      <div class="text-center p-4 border-top">&copy; 2025 Hook Fight Store</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="javascript/main.js"></script>
+        <script src="javascript/keranjang.js"></script>
+        <script>
+          // Fungsi pencarian produk
+          document.getElementById("search-input").addEventListener("input", function() {
+              const searchQuery = this.value.toLowerCase(); // Ambil kata pencarian
+              const products = document.querySelectorAll(".product"); // Ambil semua produk
+
+              products.forEach(product => {
+                  const productName = product.getAttribute("data-nama").toLowerCase(); // Nama produk
+                  const productCategory = product.getAttribute("data-kategori").toLowerCase(); // Kategori produk
+
+                  // Jika nama atau kategori produk cocok dengan pencarian
+                  if (productName.includes(searchQuery) || productCategory.includes(searchQuery)) {
+                      product.style.display = "block"; // Tampilkan produk
+                  } else {
+                      product.style.display = "none"; // Sembunyikan produk
+                  }
+              });
+          });
+        </script>
+    </body>
+</html>
